@@ -1,7 +1,6 @@
 import Sidebar from "../sidebar/Sidebar";
 import "./navbar.scss";
 import { motion } from "framer-motion";
-import "/instagram.png";
 
 const Navbar = () => {
   return (
@@ -18,13 +17,13 @@ const Navbar = () => {
         </motion.span>
         <div className="socials">
           <a href="https://www.instagram.com/yoss_bass/" target="_blank">
-            <img src="/instagram.png" alt="" />
+            <img src="images/instagram.png" alt="" />
           </a>
           <a href="https://api.whatsapp.com/send?phone=6282325482326" target="_blank">
-            <img src="/whatsapp.png" alt="" />
+            <img src="images/whatsapp.png" alt="" />
           </a>
           <a href="https://github.com/Bagus1909" target="_blank">
-            <img src="/github.png" alt="" />
+            <img src="images/github.png" alt="" />
           </a>
         </div>
       </div>
