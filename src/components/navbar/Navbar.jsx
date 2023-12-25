@@ -1,6 +1,8 @@
 import Sidebar from "../sidebar/Sidebar";
 import "./navbar.scss";
 import { motion } from "framer-motion";
+import "/instagram.png";
+
 const Navbar = () => {
   return (
     <div className="navbar">
