@@ -11,6 +11,7 @@ const projectsData = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio distinctio dolores accusamus dolorem fugit nemo magnam enim cupiditate, fuga odio vitae deserunt quae quibusdam aspernatur ratione rerum quod repellat provident?",
     technologies: ["React.js", "Express", "Node.js", "MongoDB"],
+    link: "https://github.com/Bagus1909/note-app",
   },
 
   {
@@ -19,6 +20,7 @@ const projectsData = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio distinctio dolores accusamus dolorem fugit nemo magnam enim cupiditate, fuga odio vitae deserunt quae quibusdam aspernatur ratione rerum quod repellat provident?",
     technologies: ["PHP", "Laravel", "JavaScript", "Bootstrap", "MySQL"],
+    link: "https://github.com/Bagus1909/jogja-mitsubishi",
   },
   {
     image: citroen_jogja,
@@ -26,6 +28,7 @@ const projectsData = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio distinctio dolores accusamus dolorem fugit nemo magnam enim cupiditate, fuga odio vitae deserunt quae quibusdam aspernatur ratione rerum quod repellat provident?",
     technologies: ["React", "Tailwind", "Framer Motion"],
+    link: "https://github.com/Bagus1909/citroen-jogja",
   },
 ]
 
@@ -34,7 +37,8 @@ const ScrollReveal = ({ children }) => {
     <motion.div
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 0.5 }}>
+      transition={{ duration: 0.8, delay: 0.5 }}
+    >
       {children}
     </motion.div>
   )
@@ -43,7 +47,10 @@ const ScrollReveal = ({ children }) => {
 const ProjectCard = ({ project }) => {
   return (
     <ScrollReveal>
-      <div className='flex flex-col items-center gap-8 md:flex-row md:gap-24'>
+      <div
+        className='flex flex-col items-center gap-8 md:flex-row md:gap-24 cursor-pointer'
+        onClick={() => window.open(project.link)}
+      >
         <img
           src={project.image}
           alt=''
@@ -58,7 +65,8 @@ const ProjectCard = ({ project }) => {
             {project.technologies.map((tech, index) => (
               <span
                 key={index}
-                className='rounded-lg bg-black p-3'>
+                className='rounded-lg bg-black p-3'
+              >
                 {tech}
               </span>
             ))}
