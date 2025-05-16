@@ -34,7 +34,7 @@ const Hero = () => {
             Bagus Setiawan
           </h1>
           <h3 className='bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent text-2xl font-light md:text-3xl'>
-            Web Developer
+            Front End Web Developer
           </h3>
           <p className='md:textbase text-pretty text-sm text-gray-400'>
             Passionate Web Developer with expertise in creating responsive and visually appealing websites. Skilled in
@@ -57,7 +57,7 @@ const Hero = () => {
         </motion.div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Hero
